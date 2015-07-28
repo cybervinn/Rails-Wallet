@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  card_type: Visa
+  expiration_month: 1
+  expiration_year: 2017
+
+two:
+  number: MyString
+  card_type: Amex
+  expiration_month: 1
+  expiration_year: 2018

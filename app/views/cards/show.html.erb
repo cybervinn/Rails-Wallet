@@ -1,0 +1,13 @@
+<div class=<%= "card #{@card.card_type.downcase.gsub(/\s/,'')}"%> >
+  <ul class='card-attributes'>
+    <li> <%= @card.card_type %> </li>
+    <li> <%= @card.number %> </li>
+    <li> Expires: <%= "#{@card.expiration_month}/#{@card.expiration_year}" %> </li>
+  </ul>
+</div>
+
+<%= form_for :user_card, url: share_card_path do |f| %>
+  <%= f.hidden_field :card_id, value: @card.id %>
+  <%= f.select :user_id, User.all.map{ |u| [u.full_name, u.id] } %>
+  <%= f.submit 'Add User to card' %>
+<% end %>

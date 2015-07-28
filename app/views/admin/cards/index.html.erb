@@ -1,0 +1,9 @@
+<h2> Edit All User Cards </h2>
+
+<hr>
+
+<% @cards.each do |card| %>
+  <%= render partial: 'cards/card', locals: { card: card } %>
+  <%= link_to "Delete", admin_card_path(card), method: :delete %>
+  <hr>
+<% end %>

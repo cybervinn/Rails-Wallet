@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Wallet</title>
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>
+
+    <div id = "pagecontainer">
+
+    <header>
+
+      <div id = "alert">
+
+        <%= render 'shared/flashes' %>
+      
+      </div>
+
+      <h1>My Wallet </h1>
+
+      <nav>
+
+        <ul>
+
+          <% if current_user %>
+
+            <li> <%= link_to 'My Cards', user_cards_path(current_user) %> </li>
+            <li> <%= link_to 'All Users', users_path %> </li>
+            <li> <%= link_to 'All Cards', cards_path %> </li>
+            <li> <%= link_to 'Create New Card', new_card_path %> </li>
+            <li> <%= link_to "Logout #{current_user.fname}  ", session_path(current_user.id), method: :delete %> </li>
+
+          <% elsif current_admin %>
+
+            <li> <%= link_to 'All Cards', admin_cards_path %></li>
+             <li> <%= link_to "Logout #{current_admin.username}  ", new_admin_session_path(current_admin.id), method: :delete %> </li>
+
+          <% else %>
+
+            <li> <%= link_to 'Admin Login', new_admin_session_path %> </li>
+            <li> <%= link_to 'Login', root_path %> </li>
+            <li> <%= link_to 'Sign Up', new_user_path %> </li>
+
+          <% end %>
+              
+        </ul>
+
+        <hr>
+
+      </nav>
+
+
+    </header>
+
+    <%= yield %>
+
+    </div>
+
+  </body>
+
+</html>

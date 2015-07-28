@@ -1,0 +1,28 @@
+
+<div id = "edituserbox">
+
+<h2> Edit User </h2>
+
+<%= render 'shared/errors', model: @user %>
+
+<%= form_for @user do |f| %>
+
+  <p> First Name: <br>  
+  <%= f.text_field :fname, placeholder: 'First Name', class: "formheight" %> </p>
+  <p> Last Name: <br>
+    <%= f.text_field :lname, placeholder: 'Last Name', class: "formheight" %></p>
+  <p> Email Address: <br>
+    <%= f.text_field :email, placeholder: 'Email', class: "formheight" %></p>
+  <p> Phone Number: <br>
+    <%= f.text_field :phone, placeholder: 'Phone', class: "formheight" %></p>
+  <p> Password: <br>
+    <%= f.password_field :password, placeholder: 'Password', class: "formheight" %></p>
+  <p> Password Confirmation: <br>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: "formheight" %></p>
+  <p> <%= f.submit 'Edit', class: "formheight" %> </p>
+  
+<% end %>
+
+<%= link_to "Delete Account", user_path(@user), method: :delete %>
+
+</div>

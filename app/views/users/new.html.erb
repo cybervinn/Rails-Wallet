@@ -1,0 +1,17 @@
+<div class = "alert">
+  <%= render 'shared/errors', model: @user %>
+</div>
+
+
+<div id = "sign_up_box">
+  <h2>Create an Account</h2>
+  <%= form_for @user do |f| %>
+    <p> <%= f.text_field :fname, placeholder: 'First Name', class: "formheight" %> </p> 
+    <p> <%= f.text_field :lname, placeholder: 'Last Name', class: "formheight" %> </p> 
+    <p> <%= f.text_field :email, placeholder: 'Email', class: "formheight" %> </p> 
+    <p> <%= f.text_field :phone, placeholder: 'Phone', class: "formheight" %> </p> 
+    <p> <%= f.password_field :password, placeholder: 'Password', class: "formheight" %> </p> 
+    <p> <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: "formheight" %> </p> 
+    <%= f.submit 'Submit', class: "loginbutton" %>
+  <% end %>
+</div>

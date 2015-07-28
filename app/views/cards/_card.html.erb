@@ -1,0 +1,21 @@
+<div class="<%= "card #{card.card_type.downcase.gsub(/\s/,'')}"%>" >
+  <table class='card-attributes'>
+    <tr>
+      <td class ="label"> Name on Card:</td>
+      <td> <%= card.users.map(&:full_name).join(', ') %> </td>
+    </tr>
+    <tr>
+      <td> Card Type: </td>
+      <td><%= link_to card.card_type, card_path(card) %> </td>
+    </tr>
+    <tr>
+      <td> Card Number: </td>
+      <td><%= card.number %> </td>
+    </tr>
+    <tr>
+      <td> Card Expiration: </td>
+      <td><%= "#{card.expiration_month}/#{card.expiration_year}" %> </td>
+    </tr>
+
+  </table>
+</div>

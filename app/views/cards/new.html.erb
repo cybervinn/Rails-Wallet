@@ -1,0 +1,26 @@
+
+<div id = "new_card_container">
+
+  <h2> Enter a new card to Wallet </h2>
+
+  <%= form_for @card do |f| %>
+
+    <p>
+    <%= f.text_field :number, placeholder: "Credit Card Number",class: "formheight" %> </p>
+    <p> <%= f.label :expiration_month %>
+    <%= f.select :expiration_month, (1..12) %><br>
+    <%= f.label :expiration_year %>
+    <%= f.select :expiration_year, (2015..2029)%> </p>
+    <p> <%= f.submit 'Submit', class: "formheight" %> </p>
+
+  <% end %>
+
+</div>
+
+
+<%= render 'shared/errors', model: @card %>
+
+<div id='client-side-error'> </div>
+
+
+

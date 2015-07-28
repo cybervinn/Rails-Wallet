@@ -1,0 +1,6 @@
+<h2> <%= @header %> </h2>
+
+<% @cards.each do |card| %>
+  <%= render partial: 'card', locals: {card: card} %>
+<% end %>
+ 

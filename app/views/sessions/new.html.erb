@@ -1,0 +1,11 @@
+<div class  = "login_container">
+  <h2>User Login:</h2>
+  <%= form_tag '/sessions' do %>
+    <p><%= text_field_tag( :email, nil, placeholder: "Email", class: "formheight") %></p> 
+    
+     <p><%= password_field_tag( :password, nil, placeholder: "Password", class: "formheight") %> </p>
+     <%= submit_tag("Log In", class: "loginbutton") %>
+  <% end %>
+  <br>
+  No account? <%= link_to 'Sign Up', new_user_path %>
+</div>

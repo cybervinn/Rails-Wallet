@@ -1,0 +1,15 @@
+<h2> Card Users </h2>
+
+<% @users.each do |user| %>
+  <div>
+    <p>
+      <%= user.full_name %> <br>
+      <%= user.email %> <br>
+      <%= user.phone %> <br> <br>
+      <%= link_to 'Cards', user_cards_path(user) %>
+      <%= link_to 'Edit', edit_user_path(user) %>
+    </p> <hr>
+
+  </div>
+
+<% end %>

@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+  font-family: sans-serif;
+}
+
+header h1 {
+  text-align: right;
+}
+
+#pagecontainer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.formheight {
+  width: 240px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+nav {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+nav li {
+  margin-left: 30px;
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+table {
+  width: 50%;
+}
+
+
+
+/* The following styling is for the login page */
+
+.loginbutton {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.login_container {
+  padding: 0 40px 30px 40px;
+  margin: 0 auto;
+  width: 250px;
+  border: 5px solid #70AAFF;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* The following styling is for the Sign Up page */
+
+#sign_up_box {
+  padding: 0 40px 30px 40px;
+  margin: 0 auto;
+  width: 300px;
+  border: 5px solid #70AAFF;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* New Credit Card Page */
+
+#new_card_container {
+  padding: 0 40px 30px 40px;
+  margin: 0 auto;
+  width: 300px;
+  border: 5px solid #70AAFF;;
+  border-radius: 10px;
+  text-align: center
+}
+
+/* The following styling is for the Edit User page */
+
+#edituserbox {
+  padding: 0 40px 30px 40px;
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center
+}
